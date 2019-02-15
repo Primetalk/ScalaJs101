@@ -10,18 +10,20 @@ object Main {
   }
 
   def setupUI(): Unit = {
-    $("body").append("<p>Hello, World!</p>")
-    $("#click-me-button").click(() => addClickedMessage())
+//    $("body").append("<p>Hello, World!</p>")
+//    $("#click-me-button").click(() => addClickedMessage())
+//    $("body").append("<canvas width='300' height='300'>Hello, World!</canvas>")
     val canvas = dom.document.createElement("canvas").asInstanceOf[Canvas]
     canvas.width = (0.95 * dom.window.innerWidth).toInt
     canvas.height = (0.95 * dom.window.innerHeight).toInt
     dom.document.body.appendChild(canvas)
 
-    SimplePict.draw(canvas)
+//    MandelbrotPict.draw(canvas)
+    FractalPict.draw(canvas)
   }
 
   def main(args: Array[String]): Unit = {
-    $("body").append("<p>Hello, World1!</p>")
+//    $("body").append("<p>Hello, World1!</p>")
     $(() => setupUI())
   }
 
