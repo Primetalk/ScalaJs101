@@ -11,3 +11,7 @@ libraryDependencies ++= Seq(
 )
 
 scalaJSUseMainModuleInitializer := true
+
+skip in packageJSDependencies := false
+jsDependencies +=
+  "org.webjars" % "jquery" % "2.2.1" / "jquery.js" minified "jquery.min.js"
